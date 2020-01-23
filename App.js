@@ -3,6 +3,8 @@ import { AppLoading } from 'expo';
 import { Container, Header, Content, Tab, Tabs, Fab, TabHeading, Icon, Text, List, Button, ListItem, Thumbnail, Body, Left, Right } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import CameraScreen from './screens/CameraScreen';
+import { Camera } from 'expo-camera';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -46,7 +48,7 @@ export default class App extends React.Component {
         </Header>
         <Tabs>
           <Tab heading={<TabHeading style={{ backgroundColor: "#075E54" }}><Icon style={{ color: "white" }} name="camera" /></TabHeading>}>
-
+            <CameraScreen></CameraScreen>
           </Tab>
           <Tab heading={<TabHeading style={{ backgroundColor: "#075E54" }}><Text style={{ color: "white" }}>CHATS</Text></TabHeading>}>
             <Fab style={{backgroundColor: '#25d366'}}>
